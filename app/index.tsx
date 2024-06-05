@@ -1,5 +1,6 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { Image, StyleSheet, Text, View } from 'react-native'
+
+import { icons } from '@/constants'
 
 const HomeScreen = () => {
     return (
