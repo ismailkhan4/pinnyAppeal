@@ -7,7 +7,8 @@ import info from '../assets/icons/info.png';
 import repeat from '../assets/icons/repeat.png';
 import search from '../assets/icons/search.png';
 import home from '../assets/icons/home.png';
-import shape from '../assets/icons/shape.png';
+import vector from '../assets/icons/vector.png';
+import right from '../assets/icons/right.png';
 
 export default {
   logo,
@@ -19,5 +20,6 @@ export default {
   repeat,
   search,
   home,
-  shape,
+  vector,
+  right,
 };
