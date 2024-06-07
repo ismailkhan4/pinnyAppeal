@@ -63,8 +63,8 @@ export const cardData: CardProps = [
 
 export const calculators: CalcProps = [
   { id: 1, icon: images.donation, title: 'Zakat' },
-  { id: 2, icon: images.fidya, title: 'Zakat' },
-  { id: 3, icon: images.aqiqah, title: 'Zakat' },
+  { id: 2, icon: images.fidya, title: 'Fidya' },
+  { id: 3, icon: images.aqiqah, title: 'Aqiqah' },
   { id: 4, icon: images.kafarrah, title: 'Kafarrah' },
 ];
 
@@ -96,17 +96,22 @@ export const featuredCauses: FeaturedProps = [
     title: 'Winter Relief For Yemen, Libya, Pales...',
     imgSrc: images.image2,
   },
+  {
+    id: 3,
+    title: 'Winter Relief For Yemen, Libya, Pales...',
+    imgSrc: images.image1,
+  },
 ];
 
 export const events: EventsProps = [
   {
     id: 1,
-    title: 'Winter Relief For Yemen, Libya, Pales...',
+    title: 'Sh. Assim Al Hakeem Tour - Feb 17th - Edmonton',
     imgSrc: images.image3,
   },
   {
     id: 2,
-    title: 'Winter Relief For Yemen, Libya, Pales...',
+    title: 'Sh. Assim Al Hakeem Tour - Feb 17th - Edmonton',
     imgSrc: images.image4,
   },
 ];

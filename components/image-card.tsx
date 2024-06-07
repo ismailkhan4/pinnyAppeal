@@ -1,4 +1,9 @@
-import { FlatList, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { FlatList, Image, ImageSourcePropType, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import {
+    responsiveHeight,
+    responsiveWidth,
+    responsiveFontSize
+} from "react-native-responsive-dimensions";
 
 type Props = {
     title: string;
@@ -19,23 +24,22 @@ const ImageCard = ({ title, data, type }: Props) => {
                         <TouchableOpacity key={item.id} className='flex-row  justify-center'>
                             <View className='bg-white mr-4 my-4 rounded-3xl justify-center items-center '>
                                 <Image
-                                    //@ts-ignore
-                                    source={item.imgSrc}
+                                    source={item.imgSrc as ImageSourcePropType}
                                     className='w-full h-44 rounded-t-3xl rounded-br-[70]'
                                     resizeMode='cover'
+                                    style={{height: responsiveHeight(20)}}
                                 />
-                                <View className={`${type === 'featured' ? 'w-52' : 'w-80'} bg-white p-4 -mt-6 rounded-b-3xl rounded-tl-3xl`}>
-                                    <Text className={`${type === 'default' ? 'font-psemibold' : 'font-plight w-52'} `}>{item.title}</Text>
+                                <View style={{width: type==='featured'? responsiveWidth(44): responsiveWidth(70)}} className={`bg-white py-3 px-2 -mt-6 rounded-b-3xl rounded-tl-3xl`}>
+                                    <Text className={`font-pmedium pl-3 text-black`} style={{ fontSize: responsiveFontSize(1.4) }}>{item.title}</Text>
                                     {
                                         type === 'default' && (
-                                            <View className='flex-row items-end gap-1'>
+                                            <View className='flex-row items-end justify-start gap-1 ml-2'>
                                                 <Image
-                                                    // @ts-ignore
-                                                    source={item.iconSrc}
-                                                    className='w-6 h-6'
+                                                    source={item.iconSrc as ImageSourcePropType}
+                                                    className='w-5 h-5'
                                                     resizeMode='contain'
                                                 />
-                                                <Text className='text-[#5A606D] font-plight'>{item.donors} Donors</Text>
+                                                <Text className='text-gray font-plight' style={{ fontSize: responsiveFontSize(1.4) }}>{item.donors} Donors</Text>
                                             </View>
                                         )
                                     }

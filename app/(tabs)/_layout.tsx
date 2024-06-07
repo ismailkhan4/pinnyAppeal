@@ -1,5 +1,10 @@
 import { Image, StyleSheet, Text, View } from 'react-native'
-import { Tabs, Redirect } from 'expo-router'
+import { Tabs } from 'expo-router'
+import {
+    responsiveHeight,
+    responsiveWidth,
+    responsiveFontSize
+} from "react-native-responsive-dimensions";
 import { icons } from '@/constants'
 
 type TabIconProps = {
@@ -20,9 +25,12 @@ const TabIcon = ({ icon, color, name, focused }: TabIconProps) => {
                 source={icon}
                 resizeMode='contain'
                 tintColor={color}
-                className='w-6 h-6'
+                style={{
+                    width: responsiveWidth(9),
+                    height: responsiveHeight(2.3)
+                }}
             />
-            <Text className={`${focused ? 'font-semibold' : 'font-normal'} text-xs`} style={{ color: color }}>
+            <Text className={`${focused ? 'font-psemibold' : 'font-pregular'}`} style={{ color: color, fontSize: responsiveFontSize(1.3) }}>
                 {name}
             </Text>
         </View>
@@ -41,7 +49,7 @@ const TabsLayout = (props: MainProps) => {
                         backgroundColor: '#FFFFFF',
                         borderTopLeftRadius: 16,
                         borderTopRightRadius: 16,
-                        height: 84
+                        height: responsiveHeight(8)
                     }
                 }}
             >
