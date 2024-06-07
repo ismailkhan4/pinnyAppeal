@@ -9,6 +9,7 @@ import search from '../assets/icons/search.png';
 import home from '../assets/icons/home.png';
 import vector from '../assets/icons/vector.png';
 import right from '../assets/icons/right.png';
+import slice from '../assets/icons/slice.png';
 
 export default {
   logo,
@@ -22,4 +23,5 @@ export default {
   home,
   vector,
   right,
+  slice,
 };

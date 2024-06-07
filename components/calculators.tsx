@@ -25,7 +25,9 @@ const Calculators = (props: Props) => {
                             shadowRadius: 8,
                             elevation: 10
                         }}>
-                            <View className='bg-white mr-4 my-4 rounded-xl px-6 justify-center items-center py-4'>
+                            <View
+                                className='bg-white mr-4 my-4 rounded-xl justify-center items-center'
+                                style={{ width: responsiveWidth(25), height: responsiveHeight(12) }}>
                                 <Image
                                     source={item.icon as ImageSourcePropType}
                                     className='w-12 h-12'

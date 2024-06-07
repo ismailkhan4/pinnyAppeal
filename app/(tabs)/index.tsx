@@ -17,7 +17,7 @@ type Props = {}
 
 const HomeScreen = (props: Props) => {
     return (
-        <ScrollView>
+        <ScrollView showsVerticalScrollIndicator={false}>
             <StatusBar barStyle={'dark-content'} />
             <View className='flex-row'>
                 <Image

@@ -1,3 +1,4 @@
+import { icons } from '@/constants';
 import { FlatList, Image, ImageSourcePropType, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import {
     responsiveHeight,
@@ -25,11 +26,18 @@ const ImageCard = ({ title, data, type }: Props) => {
                             <View className='bg-white mr-4 my-4 rounded-3xl justify-center items-center '>
                                 <Image
                                     source={item.imgSrc as ImageSourcePropType}
-                                    className='w-full h-44 rounded-t-3xl rounded-br-[70]'
+                                    className='w-full h-44 rounded-t-3xl'
                                     resizeMode='cover'
-                                    style={{height: responsiveHeight(20)}}
+                                    style={{ height: responsiveHeight(20) }}
                                 />
-                                <View style={{width: type==='featured'? responsiveWidth(44): responsiveWidth(70)}} className={`bg-white py-3 px-2 -mt-6 rounded-b-3xl rounded-tl-3xl`}>
+                                <Image
+                                    source={icons.slice as ImageSourcePropType}
+                                    className='absolute right-0 bottom-0'
+                                    resizeMode='contain'
+                                    tintColor={'#FFFFFF'}
+                                    style={{ height: responsiveHeight(12), width: responsiveWidth(8) }}
+                                />
+                                <View style={{ width: type === 'featured' ? responsiveWidth(44) : responsiveWidth(70) }} className={`bg-white py-3 px-2 -mt-6 rounded-b-3xl rounded-tl-3xl`}>
                                     <Text className={`font-pmedium pl-3 text-black`} style={{ fontSize: responsiveFontSize(1.4) }}>{item.title}</Text>
                                     {
                                         type === 'default' && (
